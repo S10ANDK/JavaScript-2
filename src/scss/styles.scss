@@ -1,0 +1,33 @@
+@import "_variables.scss";
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+.navbar-nav {
+    margin-left: 20px;
+}
+
+.navbar-brand {
+    z-index: 2;
+    font-size: 1.5rem;
+}
+
+.navbar-brand img {
+    width: 70px;
+}
+
+.navbar-brand p {
+    display: inline-block;
+    transform: translateY(3px);
+}
+
+.navbar-brand:hover  {
+    color: $white;
+ }
+
+ .mw-1000 {
+    max-width: 1000px;
+ }
+
+ .nav-item a {
+    font-size: 1.3rem
+ }
+
