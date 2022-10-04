@@ -27,7 +27,7 @@ h2 {
 .dropdown-menu li a:hover,
 .dropdown-toggle:hover,
 .nav-link a:hover {
-    color: #000000;
+    color: $black;
 }
 
 .navbar-toggler {
@@ -44,7 +44,7 @@ h2 {
 }
 
 .navbar-brand img {
-    width: 70px;
+    width: 50px;
 }
 
 .navbar-brand p {
@@ -52,48 +52,67 @@ h2 {
     transform: translateY(3px);
 }
 
- .mw-1000 {
+.mw-600 {
+    max-width: 600px;
+}
+
+.mw-1000 {
     max-width: 1000px;
- }
+}
 
- .nav-item a {
+.nav-item a {
     font-size: 1.3rem
- }
+}
 
- .horizontal_line {
+.horizontal_line {
     display: block;
     position: relative;
     border-right: 280px solid #d3d3d3;
     height: 1.5px;
     max-width: 280px;
     margin: 0px auto; 
-  }
+}
 
-  .active {
+.active {
     color: $gray-400 !important; 
     font-weight: bolder;
-  }
+}
 
-  .btn-outline-success {
+.btn-outline-success {
     color: $white;
     border-color: $cyan;
-  }
+}
 
-  .btn-outline-success:hover {
+.btn-outline-success:hover {
     color: $white;
     background-color: $cyan;
-  }
+    border-color: $cyan;
+}
 
-  .btn-outline-info {
+.btn-outline-info {
     color: $white;
     border-color: $yellow-200;
-  }
+}
 
-  .btn-outline-info:hover {
+.btn-outline-info:hover {
     color: $black;
+    border-color: $yellow-200;
     background-color: $yellow-200;
-  }
+}
 
-  .moon_image {
+.moon_image {
     max-width: 500px;
-  }
+}
+
+.form > * {
+    color: $black;
+}
+
+.register-link {
+    text-decoration: none;
+}
+
+.register-link:hover {
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}

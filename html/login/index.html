@@ -11,7 +11,7 @@
     <body>
         <nav class="navbar navbar-expand-lg bg-primary">
             <div class="container-fluid">
-                <a class="navbar-brand me-5" href="/index.html"><img src="/assets/logo.svg" class="logo_image me-4" alt="Logo for Social Dreams"><p>MoonTalk</p></a>
+                <a class="navbar-brand me-5" href="/index.html"><img src="/assets/logo.svg" class="me-4" alt="Logo for Social Dreams"><p>MoonTalk</p></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-expanded="false" aria-controls="navbarSupportedContent" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -40,8 +40,29 @@
                 </div>
             </div>
         </nav>
-        <main class="mx-auto mw-1000">
-
+        <main class="mx-2">
+            <div class="mx-auto w-100 text-center my-5">
+                <h1>Login</h1>
+            </div>
+            <div class="mx-auto pt-5 pb-2 my-5 mx-3 rounded-1 bg-light w-100 mw-600">
+                <div class="mx-5">
+                    <form action="/profile/" method="get" class="form d-flex flex-column">
+                        <p class="mb-4">Login to MoonTalk with your Noroff account (ending with @stud.noroff.no or @noroff.no)</p>
+                        <label for="email">E-mail address:</label>
+                        <input type="email" class="email my-1 mb-3" required>
+                        <label for="password">Password:</label>
+                        <input type="password" class="password my-1" required>
+                        <div class="login-links row">
+                            <div class="col">
+                                <a href="/html/register/index.html" class="my-4 register-link" type="submit">No account? Register here..</a>
+                            </div>
+                            <div class="col text-end">
+                                <a href="#" class="btn btn-primary my-4" type="submit">Log in</a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
         </main>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
     </body>
