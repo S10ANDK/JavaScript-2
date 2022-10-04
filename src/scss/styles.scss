@@ -1,6 +1,39 @@
 @import "_variables.scss";
 @import "../../node_modules/bootstrap/scss/bootstrap";
 
+body {
+    color: $white;
+    background-color: $secondary;
+}
+
+h2 {
+    color: $gray-400;
+    font-style: italic;
+}
+
+.nav-item a,
+.navbar-brand p {
+    color: $white;
+}
+
+.dropdown-menu li a {
+    color: $black;
+}
+
+.nav-item a:hover {
+    color: $cyan;
+}
+
+.dropdown-menu li a:hover,
+.dropdown-toggle:hover,
+.nav-link a:hover {
+    color: #000000;
+}
+
+.navbar-toggler {
+   background-color: $white; 
+}
+
 .navbar-nav {
     margin-left: 20px;
 }
@@ -19,10 +52,6 @@
     transform: translateY(3px);
 }
 
-.navbar-brand:hover  {
-    color: $white;
- }
-
  .mw-1000 {
     max-width: 1000px;
  }
@@ -31,3 +60,40 @@
     font-size: 1.3rem
  }
 
+ .horizontal_line {
+    display: block;
+    position: relative;
+    border-right: 280px solid #d3d3d3;
+    height: 1.5px;
+    max-width: 280px;
+    margin: 0px auto; 
+  }
+
+  .active {
+    color: $gray-400 !important; 
+    font-weight: bolder;
+  }
+
+  .btn-outline-success {
+    color: $white;
+    border-color: $cyan;
+  }
+
+  .btn-outline-success:hover {
+    color: $white;
+    background-color: $cyan;
+  }
+
+  .btn-outline-info {
+    color: $white;
+    border-color: $yellow-200;
+  }
+
+  .btn-outline-info:hover {
+    color: $black;
+    background-color: $yellow-200;
+  }
+
+  .moon_image {
+    max-width: 500px;
+  }
