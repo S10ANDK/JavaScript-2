@@ -3,7 +3,7 @@ import { API_SOCIAL_URL } from "../constants.mjs";
 const path = "/auth/register";
 const method = "POST";
 
-export async function registerUser(profile) {
+export async function registerProfile(profile) {
     const registerURL = API_SOCIAL_URL + path;
     console.log(registerURL);
     const body = JSON.stringify(profile);

@@ -1,7 +1,7 @@
 /**
  * Collects data from register form, turning the submitted data into an object.
  */
-import { registerUser } from "../api/auth/register.mjs";
+import { registerProfile } from "../api/auth/register.mjs";
 
 export function setFormRegisterListener() {
     const form = document.querySelector("#formRegister");
@@ -13,6 +13,12 @@ export function setFormRegisterListener() {
         const password = form.password.value
         const banner = form.banner.value
         const avatar = form.avatar.value
+
+        if(banner === "") {
+            banner === "none";
+        } if(avatar === "") {
+            avatar === "none";
+        }
     
         const profile = {
             name,
@@ -21,6 +27,7 @@ export function setFormRegisterListener() {
             banner,
             avatar
         }
-        registerUser(profile);
+
+        registerProfile(profile);
     })
 }
