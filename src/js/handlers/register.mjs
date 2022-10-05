@@ -13,12 +13,6 @@ export function setFormRegisterListener() {
         const password = form.password.value
         const banner = form.banner.value
         const avatar = form.avatar.value
-
-        if(banner === "") {
-            banner === "none";
-        } if(avatar === "") {
-            avatar === "none";
-        }
     
         const profile = {
             name,
