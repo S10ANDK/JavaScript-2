@@ -51,11 +51,15 @@
                     <form action="/html/login/index.html" method="post" class="form d-flex flex-column">
                         <p class="mb-4">Create a MoonTalk account with your Noroff e-mail (ending with @stud.noroff.no or @noroff.no)</p>
                         <label for="name">Name:</label>
-                        <input type="text" name="name" id="name" class="mt-1 mb-3" required>
+                        <input type="text" name="name" id="name" class="mt-1 mb-3" required pattern="^[\w]+$" title="Username can only contain upper case and lower case letters, numbers and underscore">
                         <label for="name">E-mail:</label>
-                        <input type="email" name="email" id="email" class="mt-1 mb-3" required>
+                        <input type="email" name="email" id="email" class="mt-1 mb-3" required pattern="^[\w\-.]+@(stud.)?noroff.no$" title="E-mail address needs to contain @stud.noroff.no or @noroff.no">
                         <label for="name">Password:</label>
-                        <input type="password" name="password" id="password" class="mt-1 mb-3" required>
+                        <input type="password" name="password" id="password" class="mt-1 mb-3" required minlength="8">
+                        <label for="banner">Password:</label>
+                        <input type="url" name="banner" id="banner" class="mt-1 mb-3" required>
+                        <label for="avatar">Password:</label>
+                        <input type="url" name="avatar" id="avatar" class="mt-1 mb-3" required>
                         <div class="login-links row">
                             <div class="col">
                                 <a href="/html/login/" class="my-4 register-link" type="submit">Already have an account? <span class="d-block">Login here..</span></a>
