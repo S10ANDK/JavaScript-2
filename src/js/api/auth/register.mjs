@@ -1,6 +1,7 @@
 import { API_SOCIAL_URL } from "../constants.mjs";
 
 const path = "/auth/register";
+const method = "POST";
 
 export async function registerUser(profile) {
     const registerURL = API_SOCIAL_URL + path;
@@ -11,6 +12,7 @@ export async function registerUser(profile) {
         headers: {
             "Content-Type": "application/json",
         },
+        method,
         body,
     });
 
