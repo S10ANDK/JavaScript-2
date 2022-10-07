@@ -6,22 +6,24 @@ import { registerProfile } from "../api/auth/register.mjs";
 export function setFormRegisterListener() {
     const form = document.querySelector("#formRegister");
 
-    form.addEventListener("submit", (event) => {
-        event.preventDefault();
-        const name = form.name.value
-        const email = form.email.value
-        const password = form.password.value
-        const banner = form.banner.value
-        const avatar = form.avatar.value
+    if (form) {
+        form.addEventListener("submit", (event) => {
+            event.preventDefault();
+            const name = form.name.value
+            const email = form.email.value
+            const password = form.password.value
+            const banner = form.banner.value
+            const avatar = form.avatar.value
+        
+            const profile = {
+                name,
+                email,
+                password,
+                banner,
+                avatar
+            }
     
-        const profile = {
-            name,
-            email,
-            password,
-            banner,
-            avatar
-        }
-
-        registerProfile(profile);
-    })
+            registerProfile(profile);
+        })
+    }
 }
