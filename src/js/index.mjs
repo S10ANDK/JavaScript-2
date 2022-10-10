@@ -1,6 +1,8 @@
 import { setFormRegisterListener } from "./handlers/register.mjs";
 import { setFormLoginListener } from "./handlers/login.mjs";
 
+import { createPost } from "./api/posts/create-post.mjs";
+
 const urlPath = location.pathname;
 
 if (urlPath === "/html/register/") {
@@ -9,10 +11,10 @@ if (urlPath === "/html/register/") {
     setFormLoginListener();
 }
 
-// createPost ({
-//     title: "Hello World",
-//     body: "This is a test"
-// })
+createPost ({
+    title: "Hello Universe",
+    body: "This is a new test"
+})
 
 // function formCreatePostListener() {
 //     const form = document.querySelector("#createPostForm");
