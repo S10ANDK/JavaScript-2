@@ -8,3 +8,27 @@ if (urlPath === "/html/register/") {
 } else if (urlPath === "/html/login/") {
     setFormLoginListener();
 }
+
+// createPost ({
+//     title: "Hello World",
+//     body: "This is a test"
+// })
+
+// function formCreatePostListener() {
+//     const form = document.querySelector("#createPostForm");
+
+//     form.addEventListener(submit, (event) => {
+//         event.preventDefault();
+
+//         const title = form.title.value;
+//         const body = form.body.value;
+
+//         const postData = {
+//             title,
+//             body
+//         } 
+//         createPost(postData);
+//     })
+// }
+
+// formCreatePostListener();
