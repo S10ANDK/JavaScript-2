@@ -44,24 +44,24 @@
         </nav>
         <main class="mx-auto mw-1000">
             <div class="mx-auto">
-                <form method="get" class="mx-2" id="createPostForm">
-                    <div class="col my-2">
-                        <input type="text" name="title" class="form-control" placeholder="Title.." required></input>
+                <form class="row mx-auto mw-600" role="search">
+                    <div class="col-8 d-flex align-items-center">
+                        <input class="w-100 border rounded-1 h-50" type="search" placeholder="Search posts.." aria-label="Search">
                     </div>
-                    <div class="col">
-                        <textarea rows="4" name="text" class="form-control" placeholder="Write a post.." required></textarea>
-                    </div>
-                    <div class="col text-end">
-                        <button type="submit" class="btn btn-primary btn-outline-success my-3" alt="Submit Button">Submit</button>
+                    <div class="col text-start">
+                        <button class="btn btn-secondary btn-outline-info my-3" type="submit">Search</button>
                     </div>
                 </form>
             </div>
             <h1 class="mx-auto w-100 text-center mt-5 mb-4">Feed</h1>
             <div class="horizontal_line mb-5 mx-auto"></div>
             <div class="col mx-auto mw-600">
-                <form method="get" class="mx-2">
+                <form method="get" class="mx-2" id="createPostForm">
+                    <div class="col my-2">
+                        <input type="text" name="title" class="form-control" placeholder="Title.." required></input>
+                    </div>
                     <div class="col">
-                        <textarea rows="4" class="w-100 border rounded-1 mw-600" placeholder="Write a post.." required></textarea>
+                        <textarea rows="4" name="text" class="form-control" placeholder="Write a post.." required></textarea>
                     </div>
                     <div class="col text-end">
                         <button type="submit" class="btn btn-primary btn-outline-success my-3" alt="Submit Button">Submit</button>
