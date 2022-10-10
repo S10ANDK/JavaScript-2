@@ -1,9 +1,7 @@
 import { setFormRegisterListener } from "./handlers/register.mjs";
 import { setFormLoginListener } from "./handlers/login.mjs";
 
-// import { updatePost } from "./api/posts/update-post.mjs";
-// import { createPost } from "./api/posts/create-post.mjs";
-import { removePost } from "./api/posts/delete-post.mjs";
+import * as post from "./api/posts/index.mjs"
 
 const urlPath = location.pathname;
 
@@ -13,15 +11,8 @@ if (urlPath === "/html/register/") {
     setFormLoginListener();
 }
 
-// createPost ({
-//     title: "Hello Universe",
-//     body: "This is a new test"
-// })
-
-// updatePost ({
-//     id: 4669,
-//     title: "Hello Universe UPDATED",
-//     body: "This is a new test UPDATED"
-// })
-
-removePost(4669);
+// post.createPost()
+// post.updatePost()
+// post.removePost()
+post.getPost(4667).then(console.log)
+// post.getPosts().then(console.log)
