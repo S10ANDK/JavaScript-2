@@ -1,7 +1,9 @@
 import { setFormRegisterListener } from "./handlers/register.mjs";
 import { setFormLoginListener } from "./handlers/login.mjs";
 
-import { createPost } from "./api/posts/create-post.mjs";
+// import { updatePost } from "./api/posts/update-post.mjs";
+// import { createPost } from "./api/posts/create-post.mjs";
+import { removePost } from "./api/posts/delete-post.mjs";
 
 const urlPath = location.pathname;
 
@@ -11,26 +13,15 @@ if (urlPath === "/html/register/") {
     setFormLoginListener();
 }
 
-createPost ({
-    title: "Hello Universe",
-    body: "This is a new test"
-})
+// createPost ({
+//     title: "Hello Universe",
+//     body: "This is a new test"
+// })
 
-// function formCreatePostListener() {
-//     const form = document.querySelector("#createPostForm");
+// updatePost ({
+//     id: 4669,
+//     title: "Hello Universe UPDATED",
+//     body: "This is a new test UPDATED"
+// })
 
-//     form.addEventListener(submit, (event) => {
-//         event.preventDefault();
-
-//         const title = form.title.value;
-//         const body = form.body.value;
-
-//         const postData = {
-//             title,
-//             body
-//         } 
-//         createPost(postData);
-//     })
-// }
-
-// formCreatePostListener();
+removePost(4669);
