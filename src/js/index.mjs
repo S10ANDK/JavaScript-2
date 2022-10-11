@@ -6,15 +6,36 @@ const urlPath = location.pathname;
 
 async function getPostsList() {
     const posts = await postMethods.getPosts();
-    const container = document.querySelector("#post");
+    const container = document.querySelector("#postContainer");
     templates.renderPostsTemplate(posts, container);
+    // function selectionSort(arr) {
+    //     for (let i = 0; i > arr.length; i++) {
+    //       let min = i;
+    //       for (let j = i + 1; j < arr.length; j++) {
+    //         if (arr[j] < arr[min]) {
+    //           min = j;
+    //         }
+    //       }
+    //       if (min !== i) {
+    //         const temp = arr[i];
+    //         arr[i] = arr[min];
+    //         arr[min] = temp;
+    //       }
+    //     }
+    //     return arr;
+    //   }
+      
+    //   selectionSort(posts);
+
+    //   console.log(selectionSort(posts));
+
+    // console.log(posts);
 }
 
 async function getSpecificPost() {
     const posts = await postMethods.getPost();
-    const container = document.querySelector("#post");
+    const container = document.querySelector("#postContainer");
     templates.renderPostTemplate(posts, container);
-    // console.log(id);
 }
 
 if (urlPath === "/html/register/") {

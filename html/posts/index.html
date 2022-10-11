@@ -47,7 +47,7 @@
             <div class="mx-auto">
                 <form class="row mx-auto mw-600" role="search">
                     <div class="col-8 d-flex align-items-center">
-                        <input class="form-control" type="search" placeholder="Search posts.." aria-label="Search">
+                        <input class="form-control" id="searchField" type="search" placeholder="Search posts.." aria-label="Search">
                     </div>
                     <div class="col text-start">
                         <button class="btn btn-secondary btn-outline-info my-3" type="submit">Search</button>
@@ -59,7 +59,11 @@
             <div class="button-container mx-auto text-center">
                 <a href="/html/post/create/" class="btn btn-primary btn-outline-success my-3" alt="Create post button">Create a post on MoonTalk</a>
             </div>
-            <div class="container-fluid" id="post">
+            <div class="filterButtonsContainer text-end">
+                <button type="button" id="#filterNewestButton" class="btn btn-secondary btn-outline-info my-3">Newest</button>
+                <button type="button" id="#filterOldestButton" class="btn btn-secondary btn-outline-info my-3">Oldest</button>
+            </div>
+            <div class="container-fluid" id="postContainer">
                 
             </div>
         </main>
