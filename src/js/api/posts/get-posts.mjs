@@ -18,11 +18,15 @@ export async function getPosts() {
 }
 
 
-export async function getPost(id) {
+export async function getPost() {
     const token = localStorage.getItem("accessToken");
     console.log(token);
 
-    const getPostURL = `${API_SOCIAL_URL}${action}/${id}`;
+    const queryString = document.location.search;
+    const params = new URLSearchParams(queryString);
+    const postNameId = params.get("id");
+
+    const getPostURL = `${API_SOCIAL_URL}${action}/${postNameId}`;
     const response = await fetch(getPostURL, {
         headers: {
             "Content-Type": "application/json",

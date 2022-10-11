@@ -9,7 +9,7 @@ export async function setRemovePostListener() {
     if (form) {
         const post = await removePost(id);
         console.log(post);
-
+        
         document.querySelector("#deleteButton").addEventListener("click", () => {
             removePost(post);
         })

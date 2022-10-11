@@ -4,6 +4,19 @@ import * as postMethods from "./api/posts/index.mjs"
 
 const urlPath = location.pathname;
 
+async function getPostsList() {
+    const posts = await postMethods.getPosts();
+    const container = document.querySelector("#post");
+    templates.renderPostsTemplate(posts, container);
+}
+
+async function getSpecificPost() {
+    const posts = await postMethods.getPost();
+    const container = document.querySelector("#post");
+    templates.renderPostTemplate(posts, container);
+    // console.log(id);
+}
+
 if (urlPath === "/html/register/") {
     listeners.setFormRegisterListener();
 } else if (urlPath === "/html/login/") {
@@ -15,15 +28,18 @@ if (urlPath === "/html/register/") {
     listeners.setRemovePostListener().then((reponse) => {
         console.log(Response);
     });
-} 
+} else if (urlPath === "/html/posts/") {
+    getPostsList();
+} else if (urlPath === "/html/post/") {
+    getSpecificPost();
+}
 
-// async function testTemplate() {
-//     const posts = await postMethods.getPosts();
-//     const container = document.querySelector("#post");
-//     templates.renderPostsTemplate(posts, container);
-// }
+
 
 // testTemplate()
+
+
+
 
 // postMethods.createPost({
 //     title: "testing",

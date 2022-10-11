@@ -8,10 +8,15 @@ export async function setUpdatePostListener() {
 
 
     if (form) {
+        const button = form.querySelector("#submitButton");
+        button.disabled = true;
+        
         const post = await getPost(id);
 
         form.title.value = post.title;
         form.body.value = post.body;
+
+        button.disabled = false;
 
         form.addEventListener("submit", (event) => {
             event.preventDefault();
