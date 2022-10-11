@@ -34,18 +34,4 @@ if (urlPath === "/html/register/") {
     getSpecificPost();
 }
 
-
-
-// testTemplate()
-
-
-
-
-// postMethods.createPost({
-//     title: "testing",
-//     body: "this is a test"
-// })
-// postMethods.updatePost()
 // postMethods.removePost()
-// postMethods.getPost(4687).then(console.log)
-// postMethods.getPosts().then(console.log)
