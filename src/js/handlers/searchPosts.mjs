@@ -3,25 +3,21 @@ import * as postMethods from "../api/posts/index.mjs"
 
 const searchField = document.querySelector("#searchField");
 
-export async function search(e) {
-    const value = e.target.value.toLowerCase();
-    
-    const posts = await postMethods.getPosts()
+export async function filterList(){
+    const filter = searchField.value.toLowerCase();
+    const listItems = document.querySelectorAll(".post");
 
-    const searchOutcome = posts.filter((postData) => 
-    postData.title.toLowerCase().includes(value) || postData.body.toLowerCase().includes(value));
+    listItems.forEach((item) => {
+        let value = item.textContent;
 
-    const postsContainer = document.querySelector("#postContainer");
-    if (searchOutcome.length === 0) {
-        postsContainer.innerHTML = "No results";
-    } else {
-        searchOutcome.forEach((postData) => {
-            postsContainer.innerHTML = "";
-            postsContainer.innerHTML += postTemplate(postData);
-        });
-    }
+        if(value.toLocaleLowerCase().includes(filter.toLowerCase())) {
+            item.style.display = "";
+        } else {
+            item.style.display = "none";
+        }
+    });
 }
 
 if (searchField) {
-    searchField.addEventListener("keyup", search);
+    searchField.addEventListener("keyup", filterList);
 }
