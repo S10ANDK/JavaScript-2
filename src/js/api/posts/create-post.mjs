@@ -4,7 +4,6 @@ const method = "post";
 
 export async function createPost(postData) {
     const token = localStorage.getItem("accessToken");
-    console.log(token);
 
     const createPostURL = API_SOCIAL_URL + "/posts";
     const response = await fetch(createPostURL, {

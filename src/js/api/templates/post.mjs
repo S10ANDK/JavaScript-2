@@ -10,7 +10,7 @@ export function postTemplate(postData) {
 
     const createdDateP = document.createElement("p");
     createdDateP.classList.add("createdDate", "col-2");
-    const createdDate = document.createTextNode(postData.created);
+    const createdDate = document.createTextNode(new Date(postData.created).toGMTString());
     createdDateP.appendChild(createdDate);
     post.appendChild(createdDateP);
 
@@ -53,7 +53,7 @@ export function postTemplateSingle(postData) {
 
     const createdDateP = document.createElement("p");
     createdDateP.classList.add("createdDate", "col");
-    const createdDate = document.createTextNode(postData.created);
+    const createdDate = document.createTextNode(new Date(postData.created).toGMTString());
     createdDateP.appendChild(createdDate);
     post.appendChild(createdDateP);
 

@@ -1,12 +1,10 @@
-import { API_SOCIAL_URL } from "../constants.mjs";
+import { API_SOCIAL_URL, postsURLAsc, postsURLDesc } from "../constants.mjs";
 
 const action = "/posts";
 
-export async function getPosts() {
+export async function getPosts(getPostsURL) {
     const token = localStorage.getItem("accessToken");
-    console.log(token);
 
-    const getPostsURL = `${API_SOCIAL_URL}${action}`;
     const response = await fetch(getPostsURL, {
         headers: {
             "Content-Type": "application/json",
@@ -16,7 +14,6 @@ export async function getPosts() {
 
     return await response.json();
 }
-
 
 export async function getPost() {
     const token = localStorage.getItem("accessToken");
