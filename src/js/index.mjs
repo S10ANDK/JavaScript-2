@@ -27,5 +27,3 @@ if (urlPath === "/html/register/") {
 } else if (urlPath === "/html/post/") {
     listeners.getSpecificPost();
 }
-
-// postMethods.removePost()
