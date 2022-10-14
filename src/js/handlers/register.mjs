@@ -12,18 +12,18 @@ export function setFormRegisterListener() {
             const name = form.name.value
             const email = form.email.value
             const password = form.password.value
-            const banner = form.banner.value
-            const avatar = form.avatar.value
         
             const profile = {
                 name,
                 email,
-                password,
-                banner,
-                avatar
+                password
             }
     
             registerProfile(profile);
+            setTimeout(function timer() {
+                window.location.href = "/html/login";
+            }, 1000);
+            alert("You have been registered")
         })
     }
 }

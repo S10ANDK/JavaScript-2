@@ -19,9 +19,6 @@ export async function loginProfile(profile) {
     const result = await response.json();
     console.log(result);
 
-
-    alert("You have been logged in!");
-
     localStorage.setItem("accessToken", result.accessToken);
     localStorage.setItem("name", result.name);
     localStorage.setItem("email", result.email);

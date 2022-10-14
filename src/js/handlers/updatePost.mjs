@@ -15,6 +15,7 @@ export async function setUpdatePostListener() {
 
         form.title.value = post.title;
         form.body.value = post.body;
+        form.media.value = post.media;
 
         button.disabled = false;
 
@@ -22,16 +23,22 @@ export async function setUpdatePostListener() {
             event.preventDefault();
             const title = form.title.value
             const body = form.body.value
+            const media = form.media.value
         
             const post = {
                 id,
                 title,
-                body
+                body,
+                media
             }
 
             post.id = id;
     
             updatePost(post);
+            alert("Post has been updated");
+            setTimeout(function timer() {
+                location.reload();
+            }, 1000);
         })
     }
 }

@@ -7,12 +7,13 @@ export async function setRemovePostListener() {
         RemovePost();
 
         setTimeout(function timer() {
-            location.reload();
+            window.location.href = "/html/posts";
         }, 1000);
+        alert("Post has been deleted")
     })
 }
 
-export async function RemovePost() {
+async function RemovePost() {
         const url = new URL(location.href);
         const id = url.searchParams.get("id");
 

@@ -8,13 +8,20 @@ export function setCreatePostListener() {
             event.preventDefault();
             const title = form.title.value
             const body = form.body.value
+            const media = form.media.value
         
             const post = {
                 title,
-                body
+                body,
+                media
             }
     
             createPost(post);
+            alert("You have created a post!")
+            setTimeout(function timer() {
+                window.location.href = "/html/posts";
+            }, 1000);
         })
+
     }
 }

@@ -18,6 +18,10 @@ export function setFormLoginListener() {
             }
     
             loginProfile(profile);
+            alert("You have been logged in!");
+            setTimeout(function timer() {
+                window.location.href = "/html/posts";
+            }, 1000);
         })
     }
 }
