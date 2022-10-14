@@ -3,9 +3,6 @@ import { postsURLAsc} from "../api/constants.mjs";
 import { getPosts } from "../api/posts/get-posts.mjs";
 import * as templates from "../api/templates/post.mjs";
 
-// const filterNewestButton = document.querySelector("#filterNewestButton");
-// const filterOldestButton = document.querySelector("#filterOldestButton");
-
 export async function filterAsc () {
     const filterOldestButton = document.querySelector("#filterOldestButton");
     const getPostsURL = postsURLAsc;
@@ -25,4 +22,3 @@ export async function filterDesc () {
     templates.renderPostsTemplate(posts, container);
     filterNewestButton.addEventListener("click", filterDesc);
 }
-

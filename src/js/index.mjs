@@ -1,5 +1,9 @@
 import * as listeners from "./handlers/index.mjs";
 
+import * as urls from "./api/constants.mjs";
+import * as postMethods from "./api/posts/index.mjs";
+import * as templates from "./api/templates/index.mjs";
+
 const urlPath = location.pathname;
 
 if (urlPath === "/html/register/") {
