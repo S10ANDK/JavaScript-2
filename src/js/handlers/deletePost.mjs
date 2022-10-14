@@ -4,7 +4,7 @@ export async function setRemovePostListener() {
     const deleteButton = document.querySelector("#deleteButton");
     deleteButton.addEventListener("click", () => {
 
-        RemovePost();
+        deletePost();
 
         setTimeout(function timer() {
             window.location.href = "/html/posts";
@@ -13,7 +13,7 @@ export async function setRemovePostListener() {
     })
 }
 
-async function RemovePost() {
+async function deletePost() {
         const url = new URL(location.href);
         const id = url.searchParams.get("id");
 
