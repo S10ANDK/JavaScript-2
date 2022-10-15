@@ -25,9 +25,9 @@ export async function setUpdatePostListener() {
 
         form.addEventListener("submit", (event) => {
             event.preventDefault();
-            const title = form.title.value
-            const body = form.body.value
-            const media = form.media.value
+            const title = form.title.value;
+            const body = form.body.value;
+            const media = form.media.value;
         
             const post = {
                 id,

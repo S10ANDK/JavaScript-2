@@ -8,32 +8,31 @@
         <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
         <link rel="stylesheet" href="/dist/css/styles.css">
         <link rel="icon" href="/assets/logo.svg">
+        <script type="module" defer src="/src/js/index.mjs"></script>
         <title>MoonTalk | Profile</title>
     </head>
     <body>
         <nav class="navbar navbar-expand-lg bg-primary">
             <div class="container-fluid">
-                <a class="navbar-brand me-5" href="/index.html"><img src="/assets/logo.svg" class="m-3" alt="Logo for Social Dreams"><p>MoonTalk</p></a>
+                <a class="navbar-brand me-5" href="/index.html" id="logo"><img src="/assets/logo.svg" class="m-3" alt="Logo for Social Dreams"><p>MoonTalk</p></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-expanded="false" aria-controls="navbarSupportedContent" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item dropdown py-3">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Username
-                            </a>
+                            <a class="nav-link dropdown-toggle" id="username" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"></a>
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="/html/profile/">Profile</a></li>
                                 <li><hr class="dropdown-divider"></li>
-                                <li><a class="dropdown-item" href="/index.html">Log out</a></li>
+                                <li><a class="dropdown-item logOutLink" href="/index.html">Log out</a></li>
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link py-4" aria-current="page" href="/html/login/">Login</a>
+                            <a class="nav-link py-4" id="loginLink" aria-current="page" href="/html/login/">Login</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link py-4" href="/html/register/">Register</a>
+                            <a class="nav-link py-4" id="registerLink" href="/html/register/">Register</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link py-4" href="/html/posts/">Feed</a>
@@ -43,7 +42,11 @@
             </div>
         </nav>
         <main class="mw-50">
+            <h1 class="mx-auto w-100 text-center mt-5 mb-4">Profile</h1>
+            <div class="horizontal_line mb-5 mx-auto"></div>
+            <div id="profileContainer">
 
+            </div>
         </main>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
     </body>

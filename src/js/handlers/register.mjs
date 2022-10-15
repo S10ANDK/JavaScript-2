@@ -9,9 +9,9 @@ export function setFormRegisterListener() {
     if (form) {
         form.addEventListener("submit", (event) => {
             event.preventDefault();
-            const name = form.name.value
-            const email = form.email.value
-            const password = form.password.value
+            const name = form.name.value;
+            const email = form.email.value;
+            const password = form.password.value;
         
             const profile = {
                 name,
@@ -23,7 +23,7 @@ export function setFormRegisterListener() {
             setTimeout(function timer() {
                 window.location.href = "/html/login";
             }, 1000);
-            alert("You have been registered")
+            alert("You have been registered");
         })
     }
 }

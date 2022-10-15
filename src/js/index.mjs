@@ -1,4 +1,5 @@
 import * as listeners from "./handlers/index.mjs";
+import * as actions from "./DOM-localStorage/index.mjs";
 
 const urlPath = location.pathname;
 
@@ -22,4 +23,11 @@ if (urlPath === "/html/register/") {
 
 } else if (urlPath === "/html/post/") {
     listeners.getSpecificPost();
+
+} else if (urlPath === "/html/profile/") {
+    actions.renderProfileDetails();
 }
+
+actions.logOut();
+
+actions.updateNavLinks();

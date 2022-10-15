@@ -4,6 +4,7 @@
 body {
     color: $white;
     background-color: $secondary;
+    letter-spacing: 2px;
 }
 
 h2 {
@@ -118,5 +119,5 @@ h2 {
 }
 
 .letter-spacing {
-    word-spacing: 25px;
+    letter-spacing: 2px;
 }

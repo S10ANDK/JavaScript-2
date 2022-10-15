@@ -9,8 +9,8 @@ export function setFormLoginListener() {
     if (form) {
         form.addEventListener("submit", (event) => {
             event.preventDefault();
-            const email = form.email.value
-            const password = form.password.value
+            const email = form.email.value;
+            const password = form.password.value;
         
             const profile = {
                 email,

@@ -9,7 +9,7 @@ export async function setRemovePostListener() {
         setTimeout(function timer() {
             window.location.href = "/html/posts";
         }, 1000);
-        alert("Post has been deleted")
+        alert("Post has been deleted");
     })
 }
 

@@ -10761,6 +10761,7 @@ textarea.form-control-lg {
 body {
   color: #fff;
   background-color: #272727;
+  letter-spacing: 2px;
 }
 
 h2, .h2 {
@@ -10872,6 +10873,10 @@ h2, .h2 {
 .register-link:hover {
   text-decoration: underline;
   text-underline-offset: 2px;
+}
+
+.letter-spacing {
+  letter-spacing: 2px;
 }
 
 /*# sourceMappingURL=styles.css.map */
