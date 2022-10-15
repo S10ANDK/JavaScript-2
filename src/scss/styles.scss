@@ -17,6 +17,10 @@ h2 {
     color: $white;
 }
 
+.nav-link:focus {
+    color: #FFFFFF;
+}
+
 .dropdown-menu li a {
     color: $black;
 }
@@ -95,10 +99,17 @@ h2 {
     border-color: $yellow-200;
 }
 
-.btn-outline-info:hover {
+.btn-outline-info:hover,
+.btn-outline-info:focus {
     color: $black;
     border-color: $yellow-200;
     background-color: $yellow-200;
+}
+
+.btn-warning {
+    background-color: $yellow-200;
+    color: $black;
+    font-weight: 600;
 }
 
 .moon_image {

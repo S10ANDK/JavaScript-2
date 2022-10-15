@@ -4,7 +4,7 @@
 
 export function postTemplate(postData) {
     const post = document.createElement("div");
-    post.classList.add("post", "row", "w-75", "mx-auto", "my-5", "border", "rounded-3", "p-5"); 
+    post.classList.add("post", "row", "w-75", "mx-auto", "my-5", "border", "rounded-3", "p-5", "text-bg-primary"); 
 
     const postHeading = document.createElement("h2");
     postHeading.classList.add("postHeading", "col");
@@ -13,7 +13,7 @@ export function postTemplate(postData) {
     post.appendChild(postHeading);
 
     const createdDateP = document.createElement("p");
-    createdDateP.classList.add("createdDate", "col-2");
+    createdDateP.classList.add("createdDate", "col-4", "text-end");
     const createdDate = document.createTextNode(new Date(postData.created).toGMTString());
     createdDateP.appendChild(createdDate);
     post.appendChild(createdDateP);
@@ -56,7 +56,7 @@ export function postTemplateSingle(postData) {
     post.appendChild(postHeading);
 
     const createdDateP = document.createElement("p");
-    createdDateP.classList.add("createdDate", "col");
+    createdDateP.classList.add("createdDate", "col-4", "text-end");
     const createdDate = document.createTextNode(new Date(postData.created).toGMTString());
     createdDateP.appendChild(createdDate);
     post.appendChild(createdDateP);

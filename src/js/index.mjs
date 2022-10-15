@@ -1,5 +1,5 @@
 import * as listeners from "./handlers/index.mjs";
-import * as actions from "./DOM-localStorage/index.mjs";
+import * as actions from "./dom-localStorage/index.mjs";
 
 const urlPath = location.pathname;
 
@@ -18,8 +18,8 @@ if (urlPath === "/html/register/") {
 
 } else if (urlPath === "/html/posts/") {
     listeners.getPostsList();
-    listeners.filterAsc();
-    listeners.filterDesc();
+    listeners.filterAscending();
+    listeners.filterDescending();
 
 } else if (urlPath === "/html/post/") {
     listeners.getSpecificPost();

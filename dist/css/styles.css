@@ -10774,6 +10774,10 @@ h2, .h2 {
   color: #fff;
 }
 
+.nav-link:focus {
+  color: #FFFFFF;
+}
+
 .dropdown-menu li a {
   color: #000;
 }
@@ -10852,10 +10856,17 @@ h2, .h2 {
   border-color: #ffe69c;
 }
 
-.btn-outline-info:hover {
+.btn-outline-info:hover,
+.btn-outline-info:focus {
   color: #000;
   border-color: #ffe69c;
   background-color: #ffe69c;
+}
+
+.btn-warning {
+  background-color: #ffe69c;
+  color: #000;
+  font-weight: 600;
 }
 
 .moon_image {
