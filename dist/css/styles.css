@@ -10890,4 +10890,8 @@ h2, .h2 {
   letter-spacing: 2px;
 }
 
+.max-width-600 {
+  max-width: 600px;
+}
+
 /*# sourceMappingURL=styles.css.map */
