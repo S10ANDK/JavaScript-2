@@ -1,6 +1,10 @@
-import { API_SOCIAL_URL, postsURLAsc, postsURLDesc } from "../constants.mjs";
+import { API_SOCIAL_URL } from "../constants.mjs";
 
 const action = "/posts";
+
+/**
+ * Passes meta data in order to fetch posts from the server
+ */
 
 export async function getPosts(getPostsURL) {
     const token = localStorage.getItem("accessToken");
@@ -15,9 +19,12 @@ export async function getPosts(getPostsURL) {
     return await response.json();
 }
 
+/**
+ * Passes meta data and inserts id to the url in order to get a specific post
+ */
+
 export async function getPost() {
     const token = localStorage.getItem("accessToken");
-    console.log(token);
 
     const queryString = document.location.search;
     const params = new URLSearchParams(queryString);

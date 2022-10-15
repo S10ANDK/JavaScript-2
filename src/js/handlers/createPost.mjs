@@ -1,5 +1,9 @@
 import { createPost } from "../api/posts/index.mjs";
 
+/**
+ * Collects data from create post form, turning the submitted data into an object.
+ */
+
 export function setCreatePostListener() {
     const form = document.querySelector("#createPostForm");
 

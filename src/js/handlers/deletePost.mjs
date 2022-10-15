@@ -13,6 +13,10 @@ export async function setRemovePostListener() {
     })
 }
 
+/**
+ * Collects id from url, and passes it in as an argument in the removePost function
+ */
+
 async function deletePost() {
         const url = new URL(location.href);
         const id = url.searchParams.get("id");

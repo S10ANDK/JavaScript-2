@@ -1,3 +1,7 @@
+/**
+ * Templates for rendering the post data content on to page.
+ */
+
 export function postTemplate(postData) {
     const post = document.createElement("div");
     post.classList.add("post", "row", "w-75", "mx-auto", "my-5", "border", "rounded-3", "p-5"); 

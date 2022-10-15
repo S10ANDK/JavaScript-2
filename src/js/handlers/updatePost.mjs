@@ -1,5 +1,9 @@
 import { getPost, updatePost } from "../api/posts/index.mjs";
 
+/**
+ * Collects data from the edit post form, turning the submitted data into an object.
+ */
+
 export async function setUpdatePostListener() {
     const form = document.querySelector("#editPostForm");
 

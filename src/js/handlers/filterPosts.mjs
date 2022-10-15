@@ -3,6 +3,10 @@ import { postsURLAsc} from "../api/constants.mjs";
 import { getPosts } from "../api/posts/get-posts.mjs";
 import * as templates from "../api/templates/post.mjs";
 
+/**
+ * Filters posts by created date, ascending.
+ */
+
 export async function filterAsc () {
     const filterOldestButton = document.querySelector("#filterOldestButton");
     const getPostsURL = postsURLAsc;
@@ -12,6 +16,10 @@ export async function filterAsc () {
     templates.renderPostsTemplate(posts, container);
     filterOldestButton.addEventListener("click", filterAsc);
 }
+
+/**
+ * Filters posts by created date, descending.
+ */
 
 export async function filterDesc () {
     const filterNewestButton = document.querySelector("#filterNewestButton");

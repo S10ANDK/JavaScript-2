@@ -1,7 +1,8 @@
-import { postTemplate } from "../api/templates/index.mjs";
-import * as postMethods from "../api/posts/index.mjs"
-
 const searchField = document.querySelector("#searchField");
+
+/**
+ * Search filter listener, listening for text string in the search input
+ */
 
 export async function filterList(){
     const filter = searchField.value.toLowerCase();

@@ -3,9 +3,12 @@ import { API_SOCIAL_URL } from "../constants.mjs";
 const path = "/auth/login";
 const method = "POST";
 
+/**
+ * Authenticates user, and stores access token and details from server to localStorage. 
+ */
+
 export async function loginProfile(profile) {
     const loginURL = API_SOCIAL_URL + path;
-    console.log(loginURL);
     const body = JSON.stringify(profile);
 
     const response = await fetch (loginURL, {
@@ -17,7 +20,6 @@ export async function loginProfile(profile) {
     });
 
     const result = await response.json();
-    console.log(result);
 
     localStorage.setItem("accessToken", result.accessToken);
     localStorage.setItem("name", result.name);

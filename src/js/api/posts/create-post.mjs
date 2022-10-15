@@ -2,6 +2,10 @@ import { API_SOCIAL_URL } from "../constants.mjs";
 
 const method = "post";
 
+/**
+ * Passes data in order to create a post
+ */
+
 export async function createPost(postData) {
     const token = localStorage.getItem("accessToken");
 
