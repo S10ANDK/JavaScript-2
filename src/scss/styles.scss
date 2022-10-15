@@ -1,0 +1,138 @@
+@import "_variables.scss";
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+body {
+    color: $white;
+    background-color: $secondary;
+    letter-spacing: 2px;
+}
+
+h2 {
+    color: $gray-400;
+    font-style: italic;
+}
+
+.nav-item a,
+.navbar-brand p {
+    color: $white;
+}
+
+.nav-link:focus {
+    color: #FFFFFF;
+}
+
+.dropdown-menu li a {
+    color: $black;
+}
+
+.nav-item a:hover {
+    color: $cyan;
+}
+
+.dropdown-menu li a:hover,
+.dropdown-toggle:hover,
+.nav-link a:hover {
+    color: $black;
+}
+
+.navbar-toggler {
+   background-color: $white; 
+}
+
+.navbar-nav {
+    margin-left: 20px;
+}
+
+.navbar-brand {
+    z-index: 2;
+    font-size: 1.5rem;
+}
+
+.navbar-brand img {
+    width: 50px;
+}
+
+.navbar-brand p {
+    display: inline-block;
+    transform: translateY(3px);
+}
+
+.mw-600 {
+    max-width: 600px;
+}
+
+.mw-1000 {
+    max-width: 1000px;
+}
+
+.nav-item a {
+    font-size: 1.3rem
+}
+
+.horizontal_line {
+    display: block;
+    position: relative;
+    border-right: 280px solid #d3d3d3;
+    height: 1.5px;
+    max-width: 280px;
+    margin: 0px auto; 
+}
+
+.active {
+    color: $gray-400 !important; 
+    font-weight: bolder;
+}
+
+.btn-outline-success {
+    color: $white;
+    border-color: $cyan;
+}
+
+.btn-outline-success:hover {
+    color: $white;
+    background-color: $cyan;
+    border-color: $cyan;
+}
+
+.btn-outline-info {
+    color: $white;
+    border-color: $yellow-200;
+}
+
+.btn-outline-info:hover,
+.btn-outline-info:focus {
+    color: $black;
+    border-color: $yellow-200;
+    background-color: $yellow-200;
+}
+
+.btn-warning {
+    background-color: $yellow-200;
+    color: $black;
+    font-weight: 600;
+}
+
+.moon_image {
+    max-width: 500px;
+}
+
+.form > * {
+    color: $black;
+}
+
+.register-link {
+    text-decoration: none;
+}
+
+.register-link:hover {
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+.letter-spacing {
+    letter-spacing: 2px;
+}
+
+.max-width-600 {
+    max-width: 600px;
+}

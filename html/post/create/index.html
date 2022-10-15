@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Create post on MoonTalk">
+        <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/dist/css/styles.css">
+        <link rel="icon" href="/assets/logo.svg">
+        <script type="module" defer src="/src/js/index.mjs"></script>
+        <title>MoonTalk | Create post</title>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg bg-primary">
+            <div class="container-fluid">
+                <a class="navbar-brand me-5" href="/index.html" id="logo"><img src="/assets/logo.svg" class="m-3" alt="Logo for Social Dreams"><p>MoonTalk</p></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-expanded="false" aria-controls="navbarSupportedContent" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item dropdown py-3">
+                            <a class="nav-link dropdown-toggle" id="username" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"></a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="/html/profile/">Profile</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item logOutLink" href="/index.html">Log out</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link py-4" id="loginLink" aria-current="page" href="/html/login/">Login</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link py-4" id="registerLink" href="/html/register/">Register</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link py-4" id="feedLink" href="/html/posts/">Feed</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <main class="mx-auto mw-1000">
+            <h1 class="mx-auto w-100 text-center mt-5 mb-4">Post Message</h1>
+            <div class="horizontal_line mb-5 mx-auto"></div>
+            <div class="col mx-auto mw-600">
+                <form class="mx-2" id="createPostForm">
+                    <div class="col my-3">
+                        <input type="text" name="title" class="form-control" placeholder="Title.." required></input>
+                    </div>
+                    <div class="col my-3">
+                        <textarea rows="4" name="body" class="form-control" placeholder="Write a post.." required></textarea>
+                    </div>
+                    <div class="col my-3">
+                        <input type="url" name="media" class="form-control" placeholder="Image.. (url)" required></textarea>
+                    </div>
+                    <div class="col text-end">
+                        <button type="submit" class="btn btn-primary btn-outline-success my-3" alt="Submit Button">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </main>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    </body>
+</html>
